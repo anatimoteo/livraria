@@ -13,7 +13,3 @@ python manage.py collectstatic --no-input
 
 # Aplica as migrações
 python manage.py migrate
-
-chmod a+x build.sh
-
-pdm add uvicorn gunicorn
