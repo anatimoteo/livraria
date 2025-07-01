@@ -5,7 +5,14 @@ from django.contrib import admin
 from django.urls import include, path
 
 from core.views.livro import LivroViewSet
-from core.views import AutorViewSet, CategoriaViewSet, EditoraViewSet, UserViewSet
+from core.views import (
+    AutorViewSet,
+    CategoriaViewSet,
+    CompraViewSet,
+    EditoraViewSet,
+    LivroViewSet,
+    UserViewSet,
+)
 
 from drf_spectacular.views import (
     SpectacularAPIView,
@@ -20,6 +27,7 @@ router.register(r'users', UserViewSet, basename='users')
 router.register(r'editoras', EditoraViewSet, basename='editoras')
 router.register(r'livros', LivroViewSet, basename='livros')
 router.register(r'autores', AutorViewSet, basename='autores')
+router.register(r'compras', CompraViewSet, basename='compras')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
